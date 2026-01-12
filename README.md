@@ -1,11 +1,3 @@
 # linksdecontacto
 
-Página simple y responsiva para mostrar una foto de perfil, descripción y botones de acción (links) para una persona.
-
-Cómo usar:
-
-- Abrir `index.html` en el navegador.
-- Reemplazar `assets/profile.svg` por tu foto (mantén el mismo nombre o actualiza `src` en `index.html`).
-- Edita los textos y enlaces en `index.html`.
-
-Para contribuir: crea un fork o abre un issue.
+En este proyecto desarrollo una página simple de presentación con links de interes para mi marca personal.
