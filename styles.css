@@ -1,14 +1,16 @@
 :root{
-  --bg: #f7f7fb;
+  --bg: #0A1A2A;
+  --bg-2: #0a3057;
   --card: #ffffff;
   --text: #0f1724;
-  --muted: #64748b;
-  --accent: #6b21a8;
-  --accent-2: #7c3aed;
+  --muted: #7dbbf2;
+  --accent: #00BFFF;
+  --accent-2: #069bcd;
 }
 @media (prefers-color-scheme: dark){
   :root{
     --bg:#081224;
+    --bg-2:#071029;
     --card:#071029;
     --text:#e6eef8;
     --muted:#9fb0c8;
@@ -19,7 +21,7 @@ html,body{height:100%}
 body{
   margin:0;
   font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background:linear-gradient(180deg,var(--bg),#ecf0ff);
+  background:linear-gradient(180deg,var(--bg),var(--bg-2));
   display:flex;
   align-items:center;
   justify-content:center;
@@ -32,22 +34,27 @@ body{
   background:var(--card);
   border-radius:16px;
   padding:28px 20px;
-  box-shadow:0 6px 20px rgba(20,24,40,0.08);
+  box-shadow:0 6px 20px rgba(var(--shadow-rgb),0.08);
   text-align:center;
 }
 .avatar{
-  width:112px;
-  height:112px;
+  width: 200px;
+  height: 200px;
   border-radius:999px;
   object-fit:cover;
   margin:0 auto 16px;
-  border:4px solid rgba(124,58,237,0.08);
+  border:4px solid var(--accent-2);
   background:linear-gradient(135deg,var(--accent),var(--accent-2));
   display:block;
 }
 .name{margin:6px 0 4px;font-size:1.25rem}
-.bio{margin:0 0 18px;color:var(--muted);line-height:1.4}
-.actions{display:flex;flex-direction:column;gap:10px}
+.bio{margin:0 0 18px;color:var(--accent);line-height:1.4}
+.actions{
+  display:inline-grid;
+  grid-auto-flow:row;
+  gap:10px;
+  justify-items:stretch;
+}
 .btn{
   display:inline-block;
   padding:12px 16px;
@@ -55,18 +62,25 @@ body{
   text-decoration:none;
   color:var(--card);
   background:linear-gradient(90deg,var(--accent),var(--accent-2));
+  width:100%;
   font-weight:600;
-  box-shadow:0 6px 18px rgba(124,58,237,0.14);
 }
 .btn.ghost{
   background:transparent;
   color:var(--accent-2);
-  border:1px solid rgba(124,58,237,0.12);
+  border:1px solid var(--accent-2);
   box-shadow:none;
 }
+
+.btn.limen{
+  background:linear-gradient(90deg,#fd6316, #F16B28);
+  color:var(--card);
+  box-shadow:none;
+}
+
 .small{margin-top:18px;color:var(--muted);font-size:0.85rem}
 
 @media(min-width:640px){
-  .actions{flex-direction:row;flex-wrap:wrap;justify-content:center}
-  .btn{min-width:140px}
+  .actions{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px}
+  .btn{min-width:140px;flex:1}
 }
