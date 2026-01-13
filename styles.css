@@ -2,7 +2,7 @@
   --bg: #0A1A2A;
   --bg-2: #0a3057;
   --card: #ffffff;
-  --text: #0f1724;
+  --text: #0A1A2A;
   --muted: #7dbbf2;
   --accent: #00BFFF;
   --accent-2: #069bcd;
@@ -47,13 +47,22 @@ body{
   background:linear-gradient(135deg,var(--accent),var(--accent-2));
   display:block;
 }
-.name{margin:6px 0 4px;font-size:1.25rem}
-.bio{margin:0 0 18px;color:var(--accent);line-height:1.4}
+.name{
+  margin:6px 0 4px;
+  font-size:1.5rem;
+  color:var(--text);
+}
+.bio{
+  margin:0 0 18px;
+  color:var(--accent);
+  line-height:1.4
+}
 .actions{
   display:inline-grid;
   grid-auto-flow:row;
   gap:10px;
   justify-items:stretch;
+  width: 100%;
 }
 .btn{
   display:inline-block;
@@ -78,7 +87,11 @@ body{
   box-shadow:none;
 }
 
-.small{margin-top:18px;color:var(--muted);font-size:0.85rem}
+.small{
+  margin-top:18px;
+  color:var(--muted);
+  font-size:0.85rem
+}
 
 @media(min-width:640px){
   .actions{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:12px}
