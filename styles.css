@@ -54,7 +54,7 @@ body{
 }
 .bio{
   margin:0 0 18px;
-  color:var(--accent);
+  color:var(--bg);
   line-height:1.4
 }
 .actions{
